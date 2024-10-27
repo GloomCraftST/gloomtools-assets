@@ -1,6 +1,6 @@
 return {
     {
-        Type = "Script",
+        Type = "LocalScript",
         Properties = {
             Source = [[
 local RS = game:GetService("ReplicatedStorage")
@@ -23,7 +23,7 @@ PSD.OnClientEvent:Connect(function()
 	script.Parent.Enabled = false
 end)
             ]],
-            Name = "BadgeScript",  -- Optional: name for the script
+            Name = "CarClient",  -- Optional: name for the script
             Enabled = true         -- Optional: whether script starts enabled
         }
     }
