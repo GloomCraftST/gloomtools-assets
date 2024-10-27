@@ -1,3 +1,8 @@
+return {
+    {
+        Type = "Script",
+        Properties = {
+            Source = [[
 local JumpPart = script.Parent
 
 JumpPart.Touched:Connect(function(TouchedPart)
@@ -7,3 +12,9 @@ JumpPart.Touched:Connect(function(TouchedPart)
 	end
 	TouchedPart.Parent:FindFirstChildWhichIsA("Humanoid").JumpPower = 50
 end)
+            ]],
+            Name = "BadgeScript",  -- Optional: name for the script
+            Enabled = true         -- Optional: whether script starts enabled
+        }
+    }
+}
