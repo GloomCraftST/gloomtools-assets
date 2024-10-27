@@ -13,7 +13,7 @@ JumpPart.Touched:Connect(function(TouchedPart)
 	TouchedPart.Parent:FindFirstChildWhichIsA("Humanoid").JumpPower = 50
 end)
             ]],
-            Name = "BadgeScript",  -- Optional: name for the script
+            Name = "JumpScript",  -- Optional: name for the script
             Enabled = true         -- Optional: whether script starts enabled
         }
     }
