@@ -1,8 +1,3 @@
-return {
-    {
-        Type = "LocalScript",
-        Properties = {
-            Source = [[
 local RS = game:GetService("ReplicatedStorage")
 local CE = RS:WaitForChild("CarEvents")
 local PD = CE:WaitForChild("PlayerDriving")
@@ -22,9 +17,4 @@ end)
 PSD.OnClientEvent:Connect(function()
 	script.Parent.Enabled = false
 end)
-            ]],
-            Name = "CarClient",  -- Optional: name for the script
-            Enabled = true         -- Optional: whether script starts enabled
-        }
-    }
-}
+
