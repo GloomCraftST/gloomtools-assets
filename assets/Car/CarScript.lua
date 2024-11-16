@@ -1,8 +1,3 @@
-return {
-    {
-        Type = "Script",
-        Properties = {
-            Source = [[
 local LW = script.Parent.Parent.LeftWheel
 local LW2 = script.Parent.Parent.LeftWheel2
 local RW = script.Parent.Parent.RightWheel
@@ -60,9 +55,3 @@ script.Parent.Changed:Connect(function(property)
 	RW2.AngularVelocity = speed * -script.Parent.Throttle
 	Steer.TargetAngle = 15 * script.Parent.Steer
 end)
-            ]],
-            Name = "CarScript",  -- Optional: name for the script
-            Enabled = true         -- Optional: whether script starts enabled
-        }
-    }
-}
