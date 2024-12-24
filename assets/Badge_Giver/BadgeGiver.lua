@@ -1,4 +1,3 @@
-
 local BadgeID = nil
 local RS = game:GetService("ReplicatedStorage")
 local Event_Connection = script:GetAttribute("Event_Connection")
