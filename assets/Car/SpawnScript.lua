@@ -7,8 +7,10 @@ local SPPart = script.Parent:WaitForChild("SPPart")
 
 local SpawnCar = false
 
+local Spawn_Duration = script:GetAttribute("SpawnDuration")
+
 while true do 
-	wait(5)
+	task.wait(Spawn_Duration)
 	if game.Workspace:FindFirstChild("Car_Template") then 
 		SpawnCar = false
 	else 
