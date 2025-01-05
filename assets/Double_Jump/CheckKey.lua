@@ -5,6 +5,16 @@ local Character = script.Parent
 
 local Humanoid = Character:FindFirstChildWhichIsA("Humanoid")
 
+local AnimID = script:GetAttribute("FlipAnimationID")
+
+local Anim = false
+
+if AnimID ~= "" then
+	local Animation = Instance.new("Animation")
+	Animation.AnimationId = AnimID
+	Anim = true
+end
+
 local animation = script:WaitForChild("FilpAnim")
 local dance = Humanoid:LoadAnimation(animation)
 
@@ -19,7 +29,7 @@ local function JumpRequest()
 		local CounterC = 0
 		debounce = true 				
 		local PDH = Character.PrimaryPart.Position.Y - 1
-		dance:Play()
+		if Anim then dance:Play() end
 		Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		AmountD += 1 
 
