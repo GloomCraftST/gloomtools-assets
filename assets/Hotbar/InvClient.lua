@@ -12,6 +12,8 @@ local Slot = script:WaitForChild("Slot")
 local Backpack = Player.Backpack
 local Char = Player.Character
 
+local CanSound = script:GetAttribute("Sounds")
+
 SG:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
 
 -- Xbox/PS Compatible <-- Means that it also works with Xbox/PS
@@ -54,12 +56,16 @@ normalSize = UDim2.new(SizeX, 0, SizeY, 0)
 
 local function tweenBig(Frame)
 	Frame:TweenSize(biggerSize, Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .15, true)
-	POP:Play()
+	if CanSound then
+		POP:Play()
+	end
 end
 
 local function tweenBack(Frame)
 	Frame:TweenSize(normalSize, Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .15, true)
-	POP:Play()
+	if CanSound then
+		POP:Play()
+	end
 end
 
 for i, Child in pairs(Backpack:GetChildren()) do 
