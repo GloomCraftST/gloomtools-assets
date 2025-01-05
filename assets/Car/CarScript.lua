@@ -12,7 +12,7 @@ local CE = RS:WaitForChild("CarEvents")
 local PD = CE:WaitForChild("PlayerDriving")
 local PSD = CE:WaitForChild("PlayerStoppedDriving")
 
-local speed = 80
+local speed = script:GetAttribute("Speed")
 
 local Player = nil
 
